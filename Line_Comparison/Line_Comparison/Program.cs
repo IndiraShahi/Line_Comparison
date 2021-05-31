@@ -4,32 +4,29 @@ namespace Line_Comparison
 {
     class Program
     {
-       
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Welcome to Line Computation");
+            Console.WriteLine("Welcome to Line Comparison Computation Program");
             Line line1 = new Line();
-            double Line1 = line1.LengthOfLine(0, 0, 2, 2);
             Line line2 = new Line();
-            double Line2 = line2.LengthOfLine(0, 0, 4, 4);
-            //using equals
-            if (line1.Equals(line2))
-                Console.WriteLine("lines are equal");
+            double FirstLine = line1.LengthOfLine(0, 0, 2, 2);
+            double SecondLine = line2.LengthOfLine(0, 0, 4, 4);
+
+            //using Equals
+            if (FirstLine.Equals(SecondLine))
+                Console.WriteLine("Lines are equal");
             else
-                Console.WriteLine("lines are not equal");
+                Console.WriteLine("Lines are not equal");
+
             //using compareTo
-            double compareValue = (line1.CompareTo(line2));
-            if (compareValue == 0)
+            double comparison = (FirstLine.CompareTo(SecondLine));
+            if (comparison == 0)
             {
-                Console.WriteLine("lines are equal");
-            }
-            else if (compareValue == 1)
-            {
-                Console.WriteLine("Second line is smaller than first line");
+                Console.WriteLine("Lines are same length");
             }
             else
             {
-                Console.WriteLine("First line is smaller than second line");
+                Console.WriteLine("Lines are not same length");
             }
         }
     }
