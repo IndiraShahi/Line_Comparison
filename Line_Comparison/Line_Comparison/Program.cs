@@ -17,6 +17,20 @@ namespace Line_Comparison
                 Console.WriteLine("lines are equal");
             else
                 Console.WriteLine("lines are not equal");
+            //using compareTo
+            double compareValue = (line1.CompareTo(line2));
+            if (compareValue == 0)
+            {
+                Console.WriteLine("lines are equal");
+            }
+            else if (compareValue == 1)
+            {
+                Console.WriteLine("Second line is smaller than first line");
+            }
+            else
+            {
+                Console.WriteLine("First line is smaller than second line");
+            }
         }
     }
 }
