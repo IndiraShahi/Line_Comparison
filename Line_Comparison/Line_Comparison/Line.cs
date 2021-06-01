@@ -4,6 +4,7 @@ namespace Line_Comparison
 {
     class Line
     {
+
         public double LengthOfLine(int x1, int y1, int x2, int y2)
         {
 
